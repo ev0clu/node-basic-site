@@ -17,6 +17,15 @@ const server = http.createServer((req, res) => {
     if(req.url === '/') {
         getPage(res, 'index.html')
     }
+    else if(req.url === '/about') {
+        getPage(res, 'about.html')
+    }
+    else if(req.url === '/contact-me') {
+        getPage(res, 'contact-me.html')
+    }
+    else {
+        getPage(res, '404.html')
+    }
 });
 
 server.listen(port, hostname, () => {
